@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Jumlah Produksi</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h1>Analisis Prediksi Jumlah Produksi Menggunakan Fuzzy Sugeno</h1>
+    <form id="prediction-form">
+        <label for="less">Pemakaian:</label>
+        <input type="number" id="less-input" name="less" min="0" max="10000000" step="1" required>
+        <label for="stock">Persediaan:</label>
+        <input type="number" id="stock-input" name="stock" min="0" max="21000000" step="1" required>
+        <button type="submit">Prediksi</button>
+    </form>
+    <div id="defuzz-value"></div>
+</body>
+</html>
